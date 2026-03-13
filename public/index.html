@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDPR App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Готовый каркас веб-приложения</h1>
+      <p>Адаптивная главная + backend API + база данных + админ-панель.</p>
+      <a class="btn" href="/admin">Открыть админ-панель</a>
+    </header>
+
+    <main class="container grid">
+      <section class="card">
+        <h2>Публичный контент</h2>
+        <div id="pages"></div>
+      </section>
+
+      <section class="card">
+        <h2>Оставить заявку</h2>
+        <form id="lead-form">
+          <input name="name" placeholder="Имя" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn">Отправить</button>
+          <p id="lead-status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
