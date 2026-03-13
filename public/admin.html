@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Админ-панель</h1>
+
+      <section class="card" id="login-card">
+        <h2>Вход</h2>
+        <form id="login-form">
+          <input name="login" placeholder="Логин" required />
+          <input name="password" type="password" placeholder="Пароль" required />
+          <button class="btn" type="submit">Войти</button>
+        </form>
+        <p id="login-status"></p>
+      </section>
+
+      <section id="dashboard" class="hidden">
+        <div class="grid">
+          <article class="card"><h3>Всего заявок</h3><p id="stat-leads">0</p></article>
+          <article class="card"><h3>Новые</h3><p id="stat-new">0</p></article>
+          <article class="card"><h3>Страницы</h3><p id="stat-pages">0</p></article>
+        </div>
+
+        <section class="card">
+          <h2>Страницы сайта</h2>
+          <form id="page-form" class="stack">
+            <input name="slug" placeholder="slug" required />
+            <input name="title" placeholder="Заголовок" required />
+            <textarea name="body" placeholder="Текст" required></textarea>
+            <label><input type="checkbox" name="is_published" checked /> Опубликовано</label>
+            <button class="btn" type="submit">Создать страницу</button>
+          </form>
+          <div id="pages-list"></div>
+        </section>
+
+        <section class="card">
+          <h2>Заявки</h2>
+          <div id="leads-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>
